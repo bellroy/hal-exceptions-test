@@ -16,7 +16,7 @@ let
     }];
   };
   lambdaBinary = "${project.runtime.components.exes.runtime}/bin/runtime";
-  runtime = pkgs.runCommand "haskell-exception-test-runtime" { } ''
+  runtime = pkgs.runCommand "hal-exception-test-runtime" { } ''
     mkdir $out
     ${pkgs.upx}/bin/upx -9 -o $out/bootstrap ${lambdaBinary}
   '';
